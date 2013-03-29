@@ -178,6 +178,7 @@ DS.SocketAdapter = DS.RESTAdapter.extend
 
 DS.SocketAdapter.map 'App.Box',
   box: { key: 'boxs' }
+  
 
 # Create ember-data datastore and define our adapter
 App.store = DS.Store.create
