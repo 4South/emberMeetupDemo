@@ -28,7 +28,7 @@ App.BoxView = Em.CollectionView.extend({
         return this.editFinished();
       },
       keyUp: function(event) {
-        if (event.keyCode === 27) {
+        if (event.keyCode === 27 || event.keyCode === 13) {
           return this.editFinished();
         }
       }

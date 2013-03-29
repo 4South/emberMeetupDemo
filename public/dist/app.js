@@ -22,12 +22,6 @@ App.BoxsController = Em.ArrayController.extend({
 });
 
 minispade.register('models/Box.js', function() {
-DS.Model.reopen({
-  save: function() {
-    return App.store.commit();
-  }
-});
-
 App.Box = DS.Model.extend({
   text: DS.attr('string')
 });
@@ -216,9 +210,15 @@ App.BoxsRoute = Em.Route.extend({
 minispade.register('store/Store.js', function() {
 minispade.require('store/Adapter.js');
 
-App.Store = DS.Store.extend({
+App.store = DS.Store.create({
   revision: 11,
   adapter: DS.SocketAdapter.create()
+});
+
+DS.Model.reopen({
+  save: function() {
+    return App.store.commit();
+  }
 });
 });
 
@@ -253,7 +253,7 @@ App.BoxView = Em.CollectionView.extend({
         return this.editFinished();
       },
       keyUp: function(event) {
-        if (event.keyCode === 27) {
+        if (event.keyCode === 27 || event.keyCode === 13) {
           return this.editFinished();
         }
       }

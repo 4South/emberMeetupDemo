@@ -22,7 +22,7 @@ App.BoxView = Em.CollectionView.extend
       focusOut: ->
         @editFinished()
       keyUp: (event)->
-        if event.keyCode == 27
+        if event.keyCode == 27 or event.keyCode == 13
           @editFinished()
     deleteBox: Em.View.extend
       classNames: ['deleteBox']
