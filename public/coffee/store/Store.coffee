@@ -1,3 +1,4 @@
+#imports the adapter
 require('store/Adapter.js')
 
 # Create ember-data datastore and define our adapter

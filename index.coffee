@@ -139,12 +139,14 @@ dbCallBack = (err, results, callback, socket, data) ->
   return false 
   
 formatResponse = (data, results)->
+  console.log "DATA:::::", data
   response =
     uuid: data.uuid
     action: data.action
     type: data.type
     data: results  
-
+    model: data.model
+    
 databaseResponseCleanup = (doc, ret, options) ->
   delete ret.__v
   ret.id = ret._id

@@ -1,5 +1,5 @@
 {
-  "name": "Ember MeetUp Demo App",
+  "name": "Ember_MeetUp_Demo_App",
   "version": "0.2.0",
   "description": "Basic Application Layout for manageable ember applications using node.js build tools",
   "main": "index.js",
@@ -12,7 +12,8 @@
     "colors": "~0.6.0-1",
     "mongoose": "~3.6.1",
     "mongodb": "~1.2.14",
-    "nodemon": "~0.7.4"
+    "nodemon": "~0.7.4",
+    "grunt-cli": "~0.1.6"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

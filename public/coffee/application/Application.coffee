@@ -1,5 +1,7 @@
+#Starting the App
 window.App = Ember.Application.create()
 
+#Loading Dependencies with Minispade
 require('models/Box.js')
 
 require('store/Adapter.js')

@@ -62,16 +62,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    connect: {
-      livereload: {
-        options: {
-          port: 9001,
-          middleware: function(connect, options) {
-            return [lrSnippet, folderMount(connect, options.base), require('./index')];
-          }
-        }
-      }
-    },
     regarde: {
       coffee: {
         files: 'public/coffee/**/*.coffee',
@@ -90,10 +80,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-livereload');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-coffee');
-  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-ember-templates');
   grunt.loadNpmTasks('grunt-regarde');
   grunt.loadNpmTasks('grunt-minispade');
-  return grunt.registerTask('default', ['livereload-start', 'connect', 'ember_templates', 'clean', 'sass', 'coffee', 'minispade', 'regarde']);
+  return grunt.registerTask('default', ['livereload-start', 'ember_templates', 'clean', 'sass', 'coffee', 'minispade', 'regarde']);
 };

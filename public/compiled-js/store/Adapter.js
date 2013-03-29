@@ -1,6 +1,4 @@
-var SOCKET, TYPES;
-
-SOCKET = "/";
+var TYPES;
 
 TYPES = {
   CREATE: "CREATE",
@@ -35,7 +33,8 @@ DS.SocketAdapter = DS.RESTAdapter.extend({
     data = {
       uuid: request.uuid,
       action: request.requestType,
-      type: this.rootForType(request.type)
+      type: this.rootForType(request.type),
+      model: request.type.toString()
     };
     if (request.record !== void 0) {
       data.record = this.serialize(request.record, {
@@ -118,17 +117,15 @@ DS.SocketAdapter = DS.RESTAdapter.extend({
     this._super();
     context = this;
     this.set("requests", {});
-    ws = window.io.connect("//" + "localhost");
-    window.reqs = this.get('requests');
+    ws = io.connect("//" + "localhost");
     ws.on("ember-data", function(payload) {
       var request, uuid;
 
       uuid = payload.uuid;
       request = context.get("requests")[uuid];
       if (payload.data) {
-        request.callback(request, payload.data);
+        return request.callback(request, payload.data);
       }
-      return context.get("requests")[uuid] = undefined;
     });
     ws.on("delete", function(payload) {
       var box, boxId;
@@ -138,13 +135,11 @@ DS.SocketAdapter = DS.RESTAdapter.extend({
       return App.store.unloadRecord(box);
     });
     ws.on("create", function(payload) {
-      window.pay = payload;
       return App.store.load(App.Box, payload.data[payload.type]);
     });
     ws.on("update", function(payload) {
       return App.store.load(App.Box, payload.data[payload.type]);
     });
-    ws.on("disconnect", function() {});
     return this.set("socket", ws);
   }
 });

@@ -6,12 +6,12 @@ persisted to the back-end which is running Mongo DB.
 
 ###Instructions###
 1. Install Mongo DB for your OS. <a href = "http://www.mongodb.org/downloads"> Mongo Download Page </a> Make sure the database is running on the default port
-27017.
-2. Install Ruby <a href = "http://www.ruby-lang.org/en/downloads/"> Ruby Download Page </a>
-3. Install Sass - "gem install sass"
+27017. Linux - "sudo apt-get install mongodb"
+2. Install Ruby <a href = "http://www.ruby-lang.org/en/downloads/"> Ruby Download Page </a> Linux - sudo apt-get install ruby
+3. Install Sass - "gem install sass" <a href = "http://sass-lang.org">Sass Homepage </a>
 4. 'git clone' on this repo: github.com/pchen4South/emberMeetupDemo.git
 5. 'npm install' - this should install all of your dependencies.
-6. start node server with 'nodemon index.js'
+6. start node server with 'nodemon index.js' or 'node index.js'
 7. start grunt process with 'grunt'
 8. load up your browser and point it at http://localhost:80
 9. There won't be any boxes yet so begin by clicking the Add Box button.

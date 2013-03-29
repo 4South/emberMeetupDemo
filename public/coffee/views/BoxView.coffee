@@ -1,5 +1,7 @@
+#Here we are using a Collection View since there are going to be child views that are conditionally visible
 App.BoxView = Em.CollectionView.extend
   contentBinding: 'controller.content'
+  #itemViewClass is defining the parent view for each item in the collection
   itemViewClass: Em.View.extend
     isEditing: false
     isHovered: false
@@ -11,6 +13,7 @@ App.BoxView = Em.CollectionView.extend
       @set('isHovered', false)
     doubleClick: ()->
       @set('isEditing', true)
+    #first conditional view which will be shown on a doubleclick of the text box
     editingView: Em.TextArea.extend
       classNames: ['editfield']
       valueBinding: 'parentView.content.text'
@@ -24,6 +27,7 @@ App.BoxView = Em.CollectionView.extend
       keyUp: (event)->
         if event.keyCode == 27 or event.keyCode == 13
           @editFinished()
+    #another conditional view, shown when hovering over a text box
     deleteBox: Em.View.extend
       classNames: ['deleteBox']
       click: ()->
