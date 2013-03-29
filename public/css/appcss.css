@@ -1,4 +1,86 @@
+@charset "IBM437";
 body {
-  background-color: orange;
+  background: url("../assets/images/debut_light.png");
   color: black;
+}
+
+.box {
+  border: 1px dotted #d0d0d0;
+  background: #e3e3e3;
+  margin: auto;
+  margin-top: 12px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #404040;
+  border-radius: 4px;
+  height: 100px;
+  width: 500px;
+}
+
+section .boxText {
+  margin-top: 8px;
+  margin-left: 10px;
+  padding: 2px;
+  width: 96%;
+  height: 84%;
+  background: #f0f0f0;
+  border-radius: 4px;
+  border: 1px solid #888888;
+  color: #333333;
+  font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.editfield {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  font-size: 18px;
+}
+
+.deleteBox {
+  background: url("../assets/images/delete.png");
+  background-position: center;
+  height: 25px;
+  width: 25px;
+  float: right;
+  margin-right: -20px;
+  margin-top: -20px;
+  border: 1px solid #a0a0a0;
+  border-radius: 2px;
+}
+
+.deleteBox:hover {
+  background: url("../assets/images/delete_hover.png");
+  background-position: center;
+}
+
+section#mainarea {
+  background: #8ba7ff;
+  min-height: 720px;
+  width: 960px;
+  margin: auto;
+  margin-top: 100px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 5px 2px #888888;
+  border-top: 1px solid white;
+  border-right: 1px solid #d0d0d0;
+}
+
+section#toolbar {
+  margin: 0px;
+  padding: 8px;
+  height: 44px;
+  background: #1034a6;
+  border-top: 1px solid white;
+  border-bottom: 2px solid fff;
+  border-radius: 4px 4px 0px 0px;
+  font-family: Gill Sans/Gill Sans MT, sans-serif;
+  font-size: 25px;
+  color: white;
 }

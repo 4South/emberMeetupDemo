@@ -1,0 +1,15 @@
+<section class = 'boxText'>
+  {{#unless view.isEditing}}
+
+      {{#if view.isHovered}}
+        {{view view.deleteBox}}
+      {{/if}}
+      
+      {{view.content.text}}
+  
+  {{else}}
+  
+    {{view view.editingView placeholder = "text here"}}
+  
+  {{/unless}}
+</section>

@@ -2,9 +2,15 @@
   "name": "4south-ember",
   "version": "0.1.0",
   "description": "Basic Application Layout for manageable ember applications using node.js build tools",
-  "main": "index.js",
+  "main": "index.coffee",
   "dependencies": {
-    "grunt": "~0.4.1"
+    "grunt": "~0.4.1",
+    "socket.io": "~0.9.13",
+    "socket.io-client": "~0.9.11",
+    "express": "~3.1.0",
+    "path": "~0.4.9",
+    "colors": "~0.6.0-1",
+    "mongoose": "~3.6.1"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

@@ -53,7 +53,7 @@ module.exports = (grunt) ->
         options:
           port: 9001
           middleware: (connect, options) ->
-            [lrSnippet, folderMount(connect, options.base)]
+            [lrSnippet, folderMount(connect, options.base), require('./index')]
 
     regarde:
       coffee:
