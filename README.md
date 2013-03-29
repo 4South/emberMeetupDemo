@@ -18,7 +18,7 @@ persisted to the back-end which is running Mongo DB.
 ##Issues##
 Please contact us if you find any issues.
 <br>
-Pete - pchen@4-south.com
+Pete - pchen@4-south.com <br>
 Steve - skane@4-south.com
 
 
