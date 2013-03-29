@@ -1,8 +1,8 @@
 {
-  "name": "4south-ember",
-  "version": "0.1.0",
+  "name": "Ember MeetUp Demo App",
+  "version": "0.2.0",
   "description": "Basic Application Layout for manageable ember applications using node.js build tools",
-  "main": "index.coffee",
+  "main": "index.js",
   "dependencies": {
     "grunt": "~0.4.1",
     "socket.io": "~0.9.13",
@@ -10,7 +10,9 @@
     "express": "~3.1.0",
     "path": "~0.4.9",
     "colors": "~0.6.0-1",
-    "mongoose": "~3.6.1"
+    "mongoose": "~3.6.1",
+    "mongodb": "~1.2.14",
+    "nodemon": "~0.7.4"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -30,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/stevekane/4south-ember/"
+    "url": "http://github.com/pchen4South/emberMeetupDemo.git"
   },
   "keywords": [
     "emberjs",
@@ -39,8 +41,9 @@
     "grunt",
     "minispade",
     "4south",
-    "stevekane"
+    "stevekane",
+    "pchen"
   ],
-  "author": "Steven Kane",
-  "license": "BSD"
+  "author": "Peter Chen",
+  "license": "MIT"
 }
