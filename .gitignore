@@ -4,3 +4,7 @@ tmp/
 *.swp
 *.swo
 *.orig
+blic/
+de_modules/
+-p/
+.sass-cache/
