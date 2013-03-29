@@ -11,7 +11,7 @@ ObjectId = require('mongoose').Types.ObjectId
 app = express()
 
 app.configure ->
-  app.set "port", 80
+  app.set "port", 9002
   app.use express.favicon()
   app.use express.logger("dev")
   app.use express.bodyParser()
